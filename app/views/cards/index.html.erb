@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= link_to 'Create a new Card', new_card_path %></h1>
+
+<div style="float:left; width: 50%">
+  <h3>Black cards</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="1"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% if @black_cards %>
+        <% @black_cards.each do |card| %>
+            <tr>
+              <td><%= card.content %></td>
+              <td><%= link_to 'Show', card %></td>
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div style="float:left; width: 50%">
+  <h3>White cards</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="1"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% if @white_cards %>
+        <% @white_cards.each do |card| %>
+            <tr>
+              <td><%= card.content %></td>
+              <td><%= link_to 'Show', card %></td>
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
